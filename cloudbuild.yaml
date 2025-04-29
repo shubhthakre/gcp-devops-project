@@ -5,13 +5,13 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/flask-app1', '.' ]
 
-  - name: 'gcr.io/cloud-builders/dockers'
+  - name: 'gcr.io/cloud-builders/docker'
     args: [ 'push', 'gcr.io/$PROJECT_ID/flask-app1']
 
   - name: 'gcr.io/cloud-builders/docker'
     args: 
     - run 
-    - image=gcr.io/$PROJECT_ID/flask-app1
+    - image=gcr.io/$PROJECT_ID/flask-app1:lastest
     - location=us-central-c
     - cluster=flask
     - namespace=flask
