@@ -9,8 +9,9 @@ steps:
     args: [ 'push', 'gcr.io/$PROJECT_ID/flask-app1']
 
   - name: 'gcr.io/cloud-builders/docker'
-    args: 
+    args:   
     - run 
+    - filename=gke.yaml
     - image=gcr.io/$PROJECT_ID/flask-app1
     - location=us-central-c
     - cluster=flask
