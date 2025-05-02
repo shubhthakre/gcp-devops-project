@@ -16,7 +16,7 @@ steps:
       - 'container'
       - 'clusters'
       - 'get-credentials'
-      - 'flask'
+      - 'flask1'
       - '--zone=us-central1-c'
       - '--project=$PROJECT_ID'
 
